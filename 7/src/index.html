@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Transform, Transition, Animation | Belajar Tailwind CSS</title>
+    <link
+      rel="stylesheet"
+      href="../dist/css/output.css" />
+  </head>
+  <body>
+    <h1 class="text-4xl font-semibold">Transform, Transition, Animation</h1>
+    <hr class="mt-2 border" />
+
+    <div
+      class="w-40 h-40 bg-pink-600 cursor-pointer my-16 mx-auto rounded-lg shadow-lg hover:scale-125 hover:rotate-90 transition hover:translate-x-32 hover:bg-indigo-600 origin-bottom-left"></div>
+
+    <div class="w-40 h-40 cursor-pointer group mx-auto">
+      <div
+        class="w-full h-full bg-lime-600 transition rounded-lg shadow-lg group-hover:scale-125 group-hover:rotate-90 group-hover:translate-x-32 group-hover:bg-indigo-600 origin-bottom-left"></div>
+    </div>
+    <div
+      class="w-40 h-40 bg-pink-600 my-8 cursor-pointer mx-auto rounded-lg shadow-lg animate-wiggle"></div>
+    <div class="mb-96"></div>
+  </body>
+</html>
