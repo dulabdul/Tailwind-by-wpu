@@ -12,6 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
       rel="stylesheet" />
     <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet" />
+    <link
       rel="stylesheet"
       href="../dist/css/output.css" />
     <title>Pseudo Class with Tailwind CSS</title>
@@ -22,18 +25,14 @@
       Belajar Tailwind CSS Pseudo Class & Dark Mode by WPU
     </h1>
     <div class="flex justify-center">
-      <span class="text-sm text-slate-300 mr-2">Light</span>
       <input
         type="checkbox"
         id="toggle"
         class="hidden" />
       <label for="toggle">
-        <div
-          class="w-9 h-5 bg-slate-500 rounded-full flex cursor-pointer items-center p-1">
-          <div class="w-4 h-4 bg-slate-100 rounded-full toggle__circle"></div>
-        </div>
+        <i
+          class="fa-solid fa-sun cursor-pointer toggle__icons text-4xl text-slate-800 dark:text-slate-200"></i>
       </label>
-      <span class="text-sm text-slate-300 ml-2">Dark</span>
     </div>
     <button
       class="bg-sky-500 px-5 py-2 active:bg-pink-800 focus:ring-1 focus:ring-sky-400 rounded-full text-white block mx-auto my-4 hover:bg-sky-700 dark:bg-slate-500 dark:hover:bg-slate-300 dark:hover:text-slate-700">
@@ -78,13 +77,20 @@
       </div>
     </section>
     <div class="mb-96"></div>
+    <script
+      src="https://kit.fontawesome.com/47a37cf9ee.js"
+      crossorigin="anonymous"></script>
     <script>
       const toggle = document.querySelector('#toggle');
       const html = document.querySelector('html');
+      const toggleIcons = document.querySelector('.toggle__icons');
       document.addEventListener('click', () => {
         toggle.checked
           ? html.classList.add('dark')
           : html.classList.remove('dark');
+        html.classList.contains('dark')
+          ? toggleIcons.classList.replace('fa-sun', 'fa-moon')
+          : toggleIcons.classList.replace('fa-moon', 'fa-sun');
       });
     </script>
   </body>
